@@ -1,0 +1,54 @@
+@import 'functions-and-mixins'; 
+@import 'footer';
+@import 'inputs-div';
+@import 'results-div';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PlusJakartaSans';
+}
+body {
+  @include display-flex(center, center, column, 50px);
+  min-height: 100vh;
+  background: $Slate-100;
+
+
+  main {
+    max-width: 800px;
+    @include display-flex(center, none, row wrap, 0 0);
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: $White;
+
+    @media (max-width: 620px) {
+      border-radius: 0;
+      background-color: $Slate-100;
+    }
+
+    >* {
+      width: 50%;
+      min-width: 300px;
+      padding: 30px;
+
+      &:nth-child(2) {
+        border-bottom-left-radius: 60px;
+        @media (max-width: 620px) {
+          border-bottom-left-radius: 0px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        min-width: 100%;
+      }
+    }
+
+    .error-message {
+    color: $Red !important;
+    font-size: 0.8rem;
+    visibility: visible;
+    display: flex;
+  }
+  }
+}

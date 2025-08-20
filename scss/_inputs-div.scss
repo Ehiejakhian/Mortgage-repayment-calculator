@@ -1,0 +1,178 @@
+
+.inputs-div {
+  @include display-flex(space-between, none, column, 20px);
+  background: $White;
+  * {color: $Slate-900;}
+
+
+  &>.header {
+    @include display-flex(space-between, center, row wrap, 10px);
+
+    button {
+      cursor: pointer;
+      background: inherit;
+      border: none;
+      border-bottom: 1px dotted;
+      transition: border-bottom $transition-duration;
+
+      &:hover {
+        border-bottom: 1px solid;
+      }
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  &>.inputs {
+    @include display-flex(space-between, none, column, 20px);
+
+    .mortgage-amount {
+      @include input-and-label-styling;
+      position: relative;
+      border: none;
+
+      label {
+        color: $Slate-700;
+      }
+      >.cool-labels {
+        @include display-flex(start, center, row-reverse, 0px);
+        font-weight: bold;
+        @include input-and-span-styling;
+
+        & + p {
+          color: $Red;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+      }
+    }
+    
+    .mortgage-details {
+      @include display-flex(space-between, start, row wrap, 15px);
+      
+      label {
+        color: $Slate-700;
+      }
+      >* {
+        flex: 1;
+        min-width: 150px;
+        @include input-and-label-styling;
+        border: none;
+
+        >.cool-labels {
+          @include display-flex(start, center, row, 0px);
+          font-weight: bold;
+          @include input-and-span-styling;
+
+          & + p {
+            color: $Red;
+            font-size: 12px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+    .mortgage-type {
+      @include display-flex(space-between, none, column, 10px);
+
+      >label {
+        color: $Slate-700;
+      }
+      .radio-inputs {
+        @include display-flex(space-between, none, column, 10px);
+
+        >* {
+          border: 1px solid $Slate-300;
+          border-radius: 5px;
+          padding: 15px;
+          position: relative;
+          @include display-flex(start, center, 
+          row, 10px);
+
+          &:focus-within {
+            border: 1px solid $Lime;
+          }
+
+          >input {
+            margin-left: 5px;
+            z-index: 1;
+            border:2px solid white;
+            box-shadow:0 0 0 1px $Slate-500;
+            appearance:none;
+            border-radius:50%;
+            width:12px;
+            height:12px;
+            background-color:#fff;
+            transition:all ease-in 0.2s;
+
+            &:hover { 
+              cursor: pointer;
+            }
+            &:focus {
+              outline: none;
+            }
+            &:checked {
+              box-shadow:0 0 0 1px $Lime;
+              background-color: $Lime
+            }
+            &:checked + label {
+              background-color: rgba(252, 216, 238, 0.5);
+            }
+          }
+
+          >label {
+            font-weight: bold;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            padding-left: 50px;
+            height: 100%;
+            @include display-flex(start, center, 
+            row, 10px);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .type-error {
+        color: $Red;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &>button {
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: $Lime;
+    @include display-flex(center, center, row, 10px);
+    font-weight: bolder;
+    padding: 10px;
+
+    @media (min-width: 650px) {
+      align-self: start;
+      padding:  10px 40px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+    &:active {
+      opacity: 1;
+      border: none;
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}

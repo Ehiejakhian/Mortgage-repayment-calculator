@@ -1,0 +1,695 @@
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: url("./PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.inputs-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 20px;
+  background: white;
+}
+
+.inputs-div * {
+  color: #122f3f;
+}
+
+.inputs-div > .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 10px;
+}
+
+.inputs-div > .header button {
+  cursor: pointer;
+  background: inherit;
+  border: none;
+  border-bottom: 1px dotted;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.inputs-div > .header button:hover {
+  border-bottom: 1px solid;
+}
+
+.inputs-div > .header button:focus {
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.inputs-div > .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 20px;
+}
+
+.inputs-div > .inputs .mortgage-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 10px;
+  border: 1px solid;
+  position: relative;
+  border: none;
+}
+
+.inputs-div > .inputs .mortgage-amount input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.inputs-div > .inputs .mortgage-amount input:hover {
+  cursor: pointer;
+}
+
+.inputs-div > .inputs .mortgage-amount label {
+  color: #4e6e7e;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+  gap: 0px;
+  font-weight: bold;
+  position: relative;
+  border: 1px solid #9abed5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels:focus-within {
+  border: 1px solid #d7da2f;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels > input {
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
+  padding: 10px 15px;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels > input:focus {
+  border: none;
+  outline: none;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels > input:focus + span {
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  background-color: #d7da2f;
+  color: #122f3f;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels > span {
+  color: #6b94a8;
+  padding: 10px 15px;
+  background: #e3f3fd;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels.error-border {
+  border: 1px solid #d73328;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels.error-border > span {
+  background: #d73328;
+  color: white;
+}
+
+.inputs-div > .inputs .mortgage-amount > .cool-labels + p {
+  color: #d73328;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.inputs-div > .inputs .mortgage-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 15px;
+}
+
+.inputs-div > .inputs .mortgage-details label {
+  color: #4e6e7e;
+}
+
+.inputs-div > .inputs .mortgage-details > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 10px;
+  border: 1px solid;
+  border: none;
+}
+
+.inputs-div > .inputs .mortgage-details > * input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.inputs-div > .inputs .mortgage-details > * input:hover {
+  cursor: pointer;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  gap: 0px;
+  font-weight: bold;
+  position: relative;
+  border: 1px solid #9abed5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels:focus-within {
+  border: 1px solid #d7da2f;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels > input {
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
+  padding: 10px 15px;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels > input:focus {
+  border: none;
+  outline: none;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels > input:focus + span {
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  background-color: #d7da2f;
+  color: #122f3f;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels > span {
+  color: #6b94a8;
+  padding: 10px 15px;
+  background: #e3f3fd;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels.error-border {
+  border: 1px solid #d73328;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels.error-border > span {
+  background: #d73328;
+  color: white;
+}
+
+.inputs-div > .inputs .mortgage-details > * > .cool-labels + p {
+  color: #d73328;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.inputs-div > .inputs .mortgage-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 10px;
+}
+
+.inputs-div > .inputs .mortgage-type > label {
+  color: #4e6e7e;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 10px;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * {
+  border: 1px solid #9abed5;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  gap: 10px;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > *:focus-within {
+  border: 1px solid #d7da2f;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > input {
+  margin-left: 5px;
+  z-index: 1;
+  border: 2px solid white;
+  -webkit-box-shadow: 0 0 0 1px #6b94a8;
+          box-shadow: 0 0 0 1px #6b94a8;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > input:hover {
+  cursor: pointer;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > input:focus {
+  outline: none;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > input:checked {
+  -webkit-box-shadow: 0 0 0 1px #d7da2f;
+          box-shadow: 0 0 0 1px #d7da2f;
+  background-color: #d7da2f;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > input:checked + label {
+  background-color: rgba(252, 216, 238, 0.5);
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > label {
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding-left: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  gap: 10px;
+}
+
+.inputs-div > .inputs .mortgage-type .radio-inputs > * > label:hover {
+  cursor: pointer;
+}
+
+.inputs-div > .inputs .mortgage-type .type-error {
+  color: #d73328;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.inputs-div > button {
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #d7da2f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  gap: 10px;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+@media (min-width: 650px) {
+  .inputs-div > button {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    padding: 10px 40px;
+  }
+}
+
+.inputs-div > button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.inputs-div > button:active {
+  opacity: 1;
+  border: none;
+  outline: none;
+}
+
+.inputs-div > button:focus {
+  outline: none;
+  border: none;
+}
+
+.results-div {
+  background: #234253;
+  color: white;
+}
+
+.results-div p {
+  color: #9abed5;
+}
+
+.results-div .if-empty {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.results-div .if-not-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 20px;
+  display: none;
+}
+
+.results-div .if-not-empty .calculation {
+  background-color: #122f3f;
+  padding: 20px;
+  border-top: 3px solid #d7da2f;
+  border-radius: 10px;
+}
+
+.results-div .if-not-empty .calculation .monthly-calculation {
+  border-bottom: 1px solid #6b94a8;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 15px;
+}
+
+.results-div .if-not-empty .calculation .monthly-calculation span {
+  color: #d7da2f;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.results-div .if-not-empty .calculation .total-calculation {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 15px;
+}
+
+.results-div .if-not-empty .calculation .total-calculation span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'PlusJakartaSans';
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 50px;
+  min-height: 100vh;
+  background: #e3f3fd;
+}
+
+body main {
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 0 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: white;
+}
+
+@media (max-width: 620px) {
+  body main {
+    border-radius: 0;
+    background-color: #e3f3fd;
+  }
+}
+
+body main > * {
+  width: 50%;
+  min-width: 300px;
+  padding: 30px;
+}
+
+body main > *:nth-child(2) {
+  border-bottom-left-radius: 60px;
+}
+
+@media (max-width: 620px) {
+  body main > *:nth-child(2) {
+    border-bottom-left-radius: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  body main > * {
+    min-width: 100%;
+  }
+}
+
+body main .error-message {
+  color: #d73328 !important;
+  font-size: 0.8rem;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=main.css.map */

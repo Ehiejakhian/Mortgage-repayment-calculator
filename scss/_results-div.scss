@@ -1,0 +1,47 @@
+
+.results-div {
+  background: $Slate-800;
+  color: $White;
+  
+  p {
+    color: $Slate-300;
+  }
+
+  .if-empty {
+    height: 100%;
+    @include display-flex(center, center, column, 20px);
+    text-align: center; 
+  }
+  .if-not-empty {
+    @include display-flex(space-between, none, column, 20px);
+    display: none;
+
+    .calculation {
+      background-color: $Slate-900;
+      padding: 20px;
+      border-top: 3px solid $Lime;
+      border-radius: 10px;
+
+      .monthly-calculation {
+        border-bottom: 1px solid $Slate-500;
+        padding-bottom: 20px;
+        @include display-flex(left, none, column, 15px);
+
+        span {
+          color: $Lime;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+      .total-calculation {
+        padding-top: 20px;
+        @include display-flex(left, none, column, 15px);
+
+        span {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

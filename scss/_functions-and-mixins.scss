@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: url('./PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+$transition-duration: .2s;
+
+//Screen 
+$Mobile: 375px;
+$Desktop: 1440px;
+
+// Colors
+// Primary
+$Lime: hsl(61, 70%, 52%);
+$Red: hsl(4, 69%, 50%);
+// Neutral
+$White: hsl(0, 0%, 100%);
+$Slate-100: hsl(202, 86%, 94%);
+$Slate-300: hsl(203, 41%, 72%);
+$Slate-500: hsl(200, 26%, 54%);
+$Slate-700: hsl(200, 24%, 40%);
+$Slate-800: hsl(201, 41%, 23%);
+$Slate-900: hsl(202, 55%, 16%);
+
+// Typography
+$Font-size: 16px;
+
+@mixin display-flex($justify-content, $align-items, $flex-flow, $gap) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-flow: $flex-flow;
+  gap: $gap;
+}
+
+@mixin input-and-label-styling {
+  @include display-flex(space-between, none, column, 10px);
+  border: 1px solid;
+
+  & input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin input-and-span-styling {
+  position: relative;
+  border: 1px solid $Slate-300;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &:focus-within {
+    border: 1px solid $Lime;
+  }
+
+  > input {
+    border: none;
+    font-size: 16px;
+    background-color: $White;
+    border-radius: 5px;
+    transition: border $transition-duration;
+    padding: 10px 15px;
+
+    &:focus {
+      border: none;
+      outline: none;
+
+      & + span {
+        transition: background-color $transition-duration;
+        background-color: $Lime;
+        color: $Slate-900;
+      }
+    }
+  }
+  >span {
+    color: $Slate-500; 
+    padding: 10px 15px;
+    background: $Slate-100;
+  }
+
+  &.error-border {
+      border: 1px solid $Red;
+
+    > span {
+      background: $Red;
+      color: $White;
+    }
+  }
+}
